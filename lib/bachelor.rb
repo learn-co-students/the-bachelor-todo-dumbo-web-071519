@@ -36,7 +36,7 @@ def count_contestants_by_hometown(data, hometown)
   data.each do |season, contestants|
     num += contestants.count{|contestant| contestant["hometown"]==hometown}
   end
-  hash = contestants(data)
+  #hash = contestants(data)
   return num
 
 end
