@@ -5,6 +5,17 @@ def get_first_name_of_season_winner(data, season)
   return name[0]
 end
 
+def contestants(data)
+  contestantHash = {}
+  data.each do |season, contestants|
+    contestants.each do |contestant|
+      contestantHash + contestant
+    end
+  end
+  puts contestantHash
+  return contestantHash
+end
+
 def get_contestant_name(data, occupation)
   # code here
   #contestant = data.select{|season, contestants, contestant| contestant["occupation"] == occupation}
@@ -25,7 +36,9 @@ def count_contestants_by_hometown(data, hometown)
   data.each do |season, contestants|
     num += contestants.count{|contestant| contestant["hometown"]==hometown}
   end
+  def contestants(data)
   return num
+
 end
 
 def get_occupation(data, hometown)
